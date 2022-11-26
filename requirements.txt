@@ -1,8 +1,6 @@
-upgrade pip
-apt-get update
 streamlit
 matplotlib
 numpy
 Pillow
 tensorflow
-opencv-python
+opencv-python-headless

@@ -1,5 +1,5 @@
 import streamlit as st
-from predictionOnImage import return_prediction
+# from predictionOnImage import return_prediction
 from PIL import Image
 from matplotlib import pyplot as plt
 import time

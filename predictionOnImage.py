@@ -1,6 +1,6 @@
 import os
 import json
-from keras.models import load_model
+# from keras.models import load_model
 import pickle
 import numpy as np
 import cv2              
@@ -9,11 +9,11 @@ from PIL import Image
 import io
 
 
-THU_MUC_GOC = r"F:\Code\DistractedDriverDetection_Final\demo\demo_Image"
-# BASE_DIR = "D:\Code\Project\DistractedDriverDetection"
-# PICKLE_DIR = os.path.join(THU_MUC_GOC,"pickle_files")
-BEST_MODEL = os.path.join(THU_MUC_GOC,"distracted-22-0.98.hdf5")
-model = load_model(BEST_MODEL)
+# THU_MUC_GOC = r"F:\Code\DistractedDriverDetection_Final\demo\demo_Image"
+# # BASE_DIR = "D:\Code\Project\DistractedDriverDetection"
+# # PICKLE_DIR = os.path.join(THU_MUC_GOC,"pickle_files")
+# BEST_MODEL = os.path.join(THU_MUC_GOC,"distracted-22-0.98.hdf5")
+# model = load_model(BEST_MODEL)
 
 # with open(os.path.join(PICKLE_DIR,"labels_list.pkl"),"rb") as handle:
 #     labels_id = pickle.load(handle)
@@ -30,7 +30,7 @@ def path_to_tensor(img_path):
     # list_of_tensors = [path_to_tensor(img_path) for img_path in tqdm(img_paths)]
     # return np.vstack(list_of_tensors)
 
-def return_prediction(filename):
+def return_prediction(filename,model):
     buffer = io.BytesIO()
     filename.save(buffer, 'jpeg')
     buffer.seek(0)

@@ -1,3 +1,4 @@
+apt-get update
 streamlit
 matplotlib
 numpy

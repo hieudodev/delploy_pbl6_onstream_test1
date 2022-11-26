@@ -1,0 +1,2 @@
+*.hdf5 filter=lfs diff=lfs merge=lfs -text
+distracted-22-0.98.hdf5 filter=lfs diff=lfs merge=lfs -text

@@ -1,8 +1,10 @@
 import streamlit as st
-# from predictionOnImage import return_prediction
+from predictionOnImage import return_prediction
 from PIL import Image
 from matplotlib import pyplot as plt
 import time
+import os
+from keras.models import load_model
 
 # thiết lập tiêu đề 
 st.title("Distracted Driver Detection")
@@ -30,7 +32,8 @@ def main():
                 plt.imshow(image)
                 plt.axis("off")
                 st.write('image',image)
-                predictions = return_prediction(image)
+                model = load_model(filename)
+                predictions = return_prediction(image,model)
                 time.sleep(1)
                 st.success('Classified')
                 st.write(predictions)

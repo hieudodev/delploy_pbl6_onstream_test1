@@ -11,6 +11,13 @@ st.title("Distracted Driver Detection")
 
 fig = plt.figure()
 
+def file_selector(folder_path='.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a model', filenames)
+    return os.path.join(folder_path, selected_filename)
+
+filename = file_selector()
+st.write('You selected `%s`' % filename)
 def main():
     st.sidebar.title('Thành viên nhóm')
     st.sidebar.subheader('VĂN HIẾU - HỮU DỰ - TIẾN ĐẠT')

@@ -1,4 +1,4 @@
-python -m --upgrade pip
+python--upgrade pip
 apt-get update
 streamlit
 matplotlib

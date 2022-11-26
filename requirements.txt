@@ -1,6 +1,3 @@
-pip install --upgrade pip
-apt-get update
-apt-get install libgl1
 streamlit
 matplotlib
 numpy
